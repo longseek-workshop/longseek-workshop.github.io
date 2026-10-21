@@ -1,0 +1,35 @@
+title: LongSeek Workshop
+description: Workshop series on long-horizon information seeking.
+show_downloads: false
+theme: jekyll-theme-cayman
+
+# The site root (index.md) redirects here. Update this when a new edition goes online.
+latest_edition:
+  url: /wsdm2027/
+  name: WSDM 2027
+
+# Defaults used when a page does not set its own values
+conference_name: "LongSeek: The First Workshop on Long-Horizon Information Seeking"
+conference_subtitle: "Memory, Optimization, and Evaluation over Extended Horizons"
+conference_at: "at the 20th ACM International Conference on Web Search and Data Mining (WSDM 2027)"
+conference_venue: "19 February 2027, Hong Kong"
+
+# Google Analytics: add a new GA4 measurement ID here once the site is live
+# (do not reuse the tutorial sites' IDs, or the statistics will mix).
+# google_analytics: G-XXXXXXXXXX
+
+github:
+  zip_url: http://www.google.com
+
+# One organiser collection per edition (e.g. add sigir2027_organisers for the next edition)
+collections:
+  wsdm2027_organisers:
+    output: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - jekyll-theme-cayman.gemspec
+  - LICENSE
+  - README.md
+  - vendor

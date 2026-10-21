@@ -1,0 +1,16 @@
+{%- assign target = page.redirect_to | default: site.latest_edition.url -%}
+{%- assign label = page.redirect_label | default: site.latest_edition.name -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ target | relative_url }}">
+    <link rel="canonical" href="{{ target | absolute_url }}">
+    <meta name="robots" content="noindex">
+    <title>Redirecting…</title>
+    <script>window.location.replace("{{ target | relative_url }}" + window.location.hash);</script>
+</head>
+<body>
+    <p>Redirecting to the <a href="{{ target | relative_url }}">{{ label }}</a> edition…</p>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<style>
+  /* WSDM 2027 schedule: scoped styles (copied from the CIKM 2026 tutorial site) */
+  .schedule-wsdm2027 .schedule-intro-lead {
+    max-width: 820px;
+    margin: 0 auto 28px;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #555;
+  }
+
+  .schedule-wsdm2027 .schedule-venue-card {
+    max-width: 960px;
+    margin: 28px auto 36px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #fafafa 0%, #f3f4f6 100%);
+    border-left: 4px solid #fed136;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    text-align: left;
+  }
+
+  .schedule-wsdm2027 .schedule-venue-card strong {
+    color: #333;
+    font-weight: 700;
+  }
+
+  .schedule-wsdm2027 .schedule-slides-note {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #777;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,.08);
+    border: 1px solid #e8e8e8;
+    background: #fff;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .table {
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap thead th {
+    background: linear-gradient(180deg, #2d2d2d 0%, #222 100%);
+    color: #fff;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-size: 13px;
+    padding: 14px 16px;
+    border: none;
+    vertical-align: middle;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap tbody td {
+    padding: 16px 18px;
+    border-color: #eee;
+    vertical-align: top;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap tbody tr:nth-child(odd) td {
+    background: #fcfcfc;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap tbody tr.row-opening td {
+    background: #f7fbfd;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap tbody tr.row-keynote td {
+    background: #fffdf5;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap tbody tr.row-break td {
+    background: #f5f5f5;
+    text-align: center;
+    font-weight: 600;
+    color: #555;
+    padding: 12px 16px;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .session-title {
+    display: block;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #222;
+    margin-bottom: 10px;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .session-list {
+    margin: 0;
+    padding-left: 1.1em;
+    color: #444;
+    line-height: 1.55;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .session-list li {
+    margin-bottom: 4px;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .time-cell {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 767px) {
+    .schedule-wsdm2027 .schedule-table-wrap .time-cell {
+      white-space: normal;
+    }
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap tbody tr.row-part td {
+    background: #2d2d2d;
+    color: #fff;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 12px 18px;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .session-desc {
+    display: block;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .session-sublist {
+    margin: 4px 0 2px;
+    padding-left: 1.2em;
+    list-style: circle;
+    color: #555;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .part-item {
+    margin-bottom: 18px;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .part-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .item-heading {
+    display: block;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .schedule-wsdm2027 .schedule-table-wrap .session-list .item-name {
+    font-weight: 600;
+    color: #333;
+  }
+</style>
+
+<section id="schedule" class="schedule-wsdm2027 {{ include.class }}">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Workshop Schedule</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <p class="large text-muted" style="font-style: italic;">To be announced.</p>
+      </div>
+    </div>
+
+<!-- Tentative half-day program from the proposal; uncomment once the time slot is confirmed.
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="schedule-venue-card">
+          <strong>Date:</strong> Friday, 19 February 2027 (half day)<br>
+          <!- - TODO: room and exact time slot once WSDM 2027 assigns them. - ->
+          <strong>Room:</strong> to be announced<br>
+          <span class="text-muted" style="font-size:14px;">Co-located with WSDM 2027 in Hong Kong, China (15 to 19 February 2027)</span>
+          <p class="schedule-slides-note">
+            Keynote speakers will be announced soon. The program below is tentative, and the exact time slot will be confirmed by WSDM 2027.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="schedule-table-wrap table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width:25%;">Time (Hong Kong)</th>
+                <th style="width:75%;">Session</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-opening">
+                <td class="time-cell">9:00 to 9:15</td>
+                <td><span class="session-title" style="margin-bottom:0;">Opening</span></td>
+              </tr>
+              <tr class="row-keynote">
+                <td class="time-cell">9:15 to 9:50</td>
+                <td><span class="session-title" style="margin-bottom:0;">Keynote I</span></td>
+              </tr>
+              <tr>
+                <td class="time-cell">9:50 to 10:20</td>
+                <td><span class="session-title" style="margin-bottom:0;">Paper spotlights and discussion I</span></td>
+              </tr>
+              <tr class="row-break">
+                <td colspan="2">Coffee break and poster session &middot; 10:20 to 10:50</td>
+              </tr>
+              <tr class="row-keynote">
+                <td class="time-cell">10:50 to 11:25</td>
+                <td><span class="session-title" style="margin-bottom:0;">Keynote II</span></td>
+              </tr>
+              <tr>
+                <td class="time-cell">11:25 to 11:55</td>
+                <td><span class="session-title" style="margin-bottom:0;">Paper spotlights and discussion II</span></td>
+              </tr>
+              <tr>
+                <td class="time-cell">11:55 to 12:50</td>
+                <td><span class="session-title" style="margin-bottom:0;">Panel discussion</span></td>
+              </tr>
+              <tr class="row-opening">
+                <td class="time-cell">12:50 to 13:00</td>
+                <td><span class="session-title" style="margin-bottom:0;">Best paper awarding and closing</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+-->
+  </div>
+</section>

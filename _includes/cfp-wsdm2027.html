@@ -1,0 +1,160 @@
+<style>
+  /* WSDM 2027 sections: scoped styles shared by the CFP, dates, keynote and PC sections */
+  .ls-wsdm2027 .ls-block {
+    max-width: 960px;
+    margin: 0 auto 26px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.65;
+    color: #555;
+  }
+  .ls-wsdm2027 .ls-block h3 {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    color: #222;
+    margin: 0 0 10px;
+    text-transform: none;
+  }
+  .ls-wsdm2027 .ls-block p { font-size: 16px; line-height: 1.65; }
+  .ls-wsdm2027 .ls-block ul { padding-left: 1.2em; margin-bottom: 0; }
+  .ls-wsdm2027 .ls-block li { margin-bottom: 8px; }
+  .ls-wsdm2027 .ls-block ul ul { margin-top: 6px; list-style: circle; }
+  .ls-wsdm2027 .ls-block ul ul li { margin-bottom: 4px; }
+  .ls-wsdm2027 .topic-name { font-weight: 700; color: #333; }
+  .ls-wsdm2027 .tba { color: #888; font-style: italic; }
+  .ls-wsdm2027 .tba-center { text-align: center; font-size: 18px; }
+
+  /* Topic bands (after grit-genir.github.io): alternating white / warm grey rows, gold dot before each theme title */
+  .ls-wsdm2027 .theme-list { border-top: 1px solid #e3e1db; margin-top: 18px; }
+  .ls-wsdm2027 .theme-row { padding: 22px 30px 20px; border-bottom: 1px solid #e3e1db; background: #fff; }
+  .ls-wsdm2027 .theme-row:nth-child(even) { background: #f1efe9; }
+  .ls-wsdm2027 .theme-row h4 {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px; font-weight: 700; color: #1d1f21; text-transform: none; letter-spacing: .01em;
+    margin: 0 0 10px; position: relative; padding-left: 24px;
+  }
+  .ls-wsdm2027 .theme-row h4::before {
+    content: ""; position: absolute; left: 0; top: 5px; width: 11px; height: 11px; border-radius: 50%; background: #b5862e;
+  }
+  .ls-wsdm2027 .theme-row p { margin: 0 0 8px; text-align: justify; }
+  .ls-wsdm2027 .theme-row ul { margin-top: 4px; }
+
+  /* Submit button (after grit-genir.github.io) */
+  .ls-wsdm2027 .submit-wrap { margin-top: 26px; margin-bottom: 6px; }
+  .ls-wsdm2027 .submit-btn {
+    display: inline-block; background: #17191b; color: #fff; border-radius: 4px;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-size: 20px;
+    padding: 20px 40px; text-decoration: none; letter-spacing: .01em;
+  }
+  .ls-wsdm2027 a.submit-btn:hover, .ls-wsdm2027 a.submit-btn:focus { background: #000; color: #fed136; text-decoration: none; }
+  .ls-wsdm2027 .submit-btn.disabled { background: #6b6e72; cursor: default; }
+</style>
+
+<section id="cfp" class="ls-wsdm2027 {{ include.class }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Call for Papers</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="ls-block">
+          <h3>Themes and Topics</h3>
+          <p>We highlight some limitations in the current literature and present potential topics attendees can explore in this workshop.</p>
+          <div class="theme-list">
+            <div class="theme-row">
+              <h4>Context explosion and efficiency bottleneck</h4>
+              <p>Existing studies have shown that systems struggle to process long and accumulated contexts in a long-horizon setting. Most existing studies naively append all past information (e.g., observations and actions) as context to LLMs. However, the unboundedly growing context quickly hits context window limits of LLMs, introduces substantial irrelevant or redundant information, and incurs high inference costs or performance drop.</p>
+              <p>We aim to explore research directions, including, but not limited to, the following:</p>
+              <ul>
+                <li><b>Trajectory memorization and management.</b> Designing <i>memory search systems</i> to retrieve and dynamically select relevant information from long, accumulated contexts for subsequent decision making. Specialized mechanisms can be implemented to categorize, organize, and use heterogeneous contextual information and temporal structure to streamline information processing.</li>
+                <li><b>Context filtration and compression.</b> Developing approaches to summarize long contexts or filter out noise while preserving relevant information in either a contextualized or parametric way for the specific purpose of usage in the long-horizon system.</li>
+                <li><b>Consistent personalization.</b> Developing methods to sustain temporally consistent user personas at scale.</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Optimization for long temporal horizons</h4>
+              <p>Recent studies show that many optimization issues occur over long horizons. There is a lack of explicit step-wise supervision data for long horizons. Many existing studies use reinforcement learning (RL) with outcome-only rewards that are only available at the end of the task, leading to unstable training and insufficient optimization of intermediate steps over horizons.</p>
+              <p>We aim to explore research directions, including, but not limited to, the following:</p>
+              <ul>
+                <li><b>Optimization with search calls.</b> Optimizing systems to effectively and efficiently issue search queries and use IR pipelines over long time horizons.</li>
+                <li><b>Intermediate supervision and synthetic data generation.</b> Proposing methods to generate synthetic training data or annotations that provide supervision signals for intermediate steps.</li>
+                <li><b>Learning with sparse rewards.</b> Developing methods to better handle delayed and sparse rewards in long-horizon processes.</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Evaluation over long temporal horizons</h4>
+              <p>Most existing work mainly evaluates final answers, while largely overlooking the quality of intermediate steps (e.g., search quality). However, in long-horizon settings, errors often accumulate over time, making intermediate behaviors an essential part of system evaluation. In addition, long-horizon settings raise evaluation challenges beyond effectiveness alone, such as latency, robustness, transparency, and explainability (for non-technical users) over extended interactions.</p>
+              <p>We aim to explore topics including, but not limited to, the following:</p>
+              <ul>
+                <li><b>Evaluation data curation with intermediate steps.</b> Creating evaluation datasets and assessing the quality of intermediate search results, decisions, and actions in a long-horizon process.</li>
+                <li><b>Multi-dimensional evaluation.</b> Going beyond final-task effectiveness to consider additional dimensions such as efficiency, computational cost, and error propagation over time.</li>
+                <li><b>Transparency and explainability.</b> Long-horizon settings make maintaining transparency and explainability more challenging. It is therefore crucial to measure transparency and explainability at both intermediate decision-making steps and the final answer.</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Multilingual and multimodal scenarios</h4>
+              <p>In practice, long-horizon information seeking involves interacting with information across languages and modalities over extended periods of time, introducing additional challenges for search, representation, and reasoning. These challenges grow with the horizon: evidence in different languages and modalities must be aligned and kept consistent in memory across many steps, and an alignment error made early propagates to every later decision.</p>
+              <p>We aim to explore the following directions:</p>
+              <ul>
+                <li><b>Multilingual.</b> Supporting long-horizon information seeking when evidence is distributed across multiple languages, requiring cross-lingual alignment.</li>
+                <li><b>Multimodal.</b> Studying how systems can reason over text, images, and other modalities over long time horizons while maintaining consistent representations and memory.</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Long horizons in domain-specific scenarios</h4>
+              <p>Limited research has explored long-horizon information seeking in domain-specific settings, such as law, finance, medicine, science, and education. We encourage contributions that investigate domain-specific scenarios, including integrating domain knowledge into long-horizon systems and developing domain-specific models and applications.</p>
+            </div>
+            <div class="theme-row">
+              <h4>Human-centered long-horizon information seeking</h4>
+              <p>Long horizons also raise human-centered questions: how users inspect and correct what a system remembers, how trust and reliance evolve over extended interactions, and how to study users over weeks rather than in single sessions. We welcome user studies, interaction design, and qualitative work alongside technical contributions.</p>
+            </div>
+          </div>
+          <p style="margin-top: 12px; margin-bottom: 0;">We are open to other topics, including, but not limited to, lifelong learning and self-evolving methods in long-horizon settings, as well as new resources and perspectives.</p>
+        </div>
+
+        <div class="ls-block">
+          <h3>Paper type</h3>
+          <ul>
+            <li><b>Original papers.</b> We welcome paper submissions in various types, including research papers, position papers, reproducibility papers, demonstration papers, and data collection papers.
+              <!-- TODO: page limits once decided. -->
+              Page limits: <span class="tba">To be announced.</span></li>
+            <li><b>Published papers.</b> We welcome papers already accepted at top-tier conferences or in journals, e.g., SIGIR, WWW, WSDM, CIKM, ECIR, ACL, EMNLP, TOIS, and IP&amp;M. Authors should submit a 1-page abstract, including the full reference where the paper was accepted.</li>
+          </ul>
+        </div>
+
+        <div class="ls-block">
+          <h3>Paper submission &amp; selection</h3>
+          <p>
+            <!-- TODO: submission system (CMT / OpenReview) and template (ACM sigconf?) once decided. -->
+            Paper template: <span class="tba">To be announced.</span>
+          </p>
+          <p style="margin-bottom: 0;">
+            Each manuscript will be peer-reviewed by at least three program committee (PC) members.
+            Authors of accepted papers will be invited for spotlight and poster presentations at the workshop, so that all authors have a chance to speak.
+            All presentations will be held in person in Hong Kong, in accordance with WSDM 2027 policy; accepted papers that cannot be presented in person will be excluded from the Companion Proceedings.
+            Accepted original papers will be published in the WSDM 2027 Companion Proceedings.
+          </p>
+        </div>
+
+        <div class="ls-block">
+          <h3>Paper award</h3>
+          <p style="margin-bottom: 0;">A best paper award will be selected based on the PC's evaluations and announced at the end of the workshop.</p>
+        </div>
+
+        <!-- Submit button: set submission_system and submission_url in wsdm2027.md once the submission site is open. -->
+        <div class="ls-block submit-wrap">
+          {% if page.submission_url %}
+          <a class="submit-btn" href="{{ page.submission_url }}" target="_blank">Submit via {{ page.submission_system }} &rarr;</a>
+          {% else %}
+          <span class="submit-btn disabled">Submission site to be announced</span>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
