@@ -1010,3 +1010,9 @@ header .intro-text .intro-logo { display: block; margin: 0 auto 26px; height: 92
 
 /* WSDM 2027 page: keep the header title in title case (the theme sets intro-heading to all caps) */
 body.home-wsdm2027 header .intro-text .intro-heading { text-transform: none; }
+
+/* Keep the eight menu items on one row on mid-width screens (992-1199px, 970px container):
+   tighter padding and no letter spacing there; wider screens keep the theme default. */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-default .navbar-nav > li > a { padding-left: 10px; padding-right: 10px; letter-spacing: 0; }
+}
