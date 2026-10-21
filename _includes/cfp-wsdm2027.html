@@ -171,23 +171,24 @@
         <div class="ls-block">
           <h3>Paper type</h3>
           <ul>
-            <li><b>Original papers.</b> We welcome paper submissions in various types, including research papers, position papers, reproducibility papers, demonstration papers, and data collection papers.
+            <li><b>Original papers.</b> We welcome paper submissions in various types, including research papers, position papers, survey papers, reproducibility papers, demonstration papers, and data collection papers.
               <!-- TODO: page limits once decided. -->
               Page limits: 4 to 8 pages, including references.</li>
+            {% comment %} Removed 2026-10-21 (no published-paper track):
             <li><b>Published papers.</b> We welcome papers already accepted at top-tier conferences or in journals, e.g., SIGIR, WWW, WSDM, CIKM, ECIR, ACL, EMNLP, TOIS, and IP&amp;M. Authors should submit a 1-page abstract, including the full reference where the paper was accepted.</li>
+            {% endcomment %}
           </ul>
         </div>
 
         <div class="ls-block">
           <h3>Paper submission &amp; selection</h3>
           <p>
-            Paper template: papers must use the <a href="https://www.acm.org/publications/proceedings-template" target="_blank">ACM formatting</a>, sigconf style, and be submitted as PDF; original papers use <code>\documentclass[sigconf,anonymous,review]{acmart}</code>.
+            Paper template: papers must use the <a href="https://www.acm.org/publications/proceedings-template" target="_blank">ACM formatting</a>, sigconf style, and be submitted as PDF; use <code>\documentclass[sigconf,anonymous,review]{acmart}</code>.
           </p>
           <p style="margin-bottom: 0;">
             Each original paper will be peer-reviewed by at least three program committee (PC) members.
             The review of original papers is double-blind, so authors must anonymise their submissions.
-            Abstracts of published papers will be checked by the organisers for relevance to the workshop.
-            These abstracts are not anonymised because they include the full reference.
+            {% comment %} Removed 2026-10-21 (no published-paper track): Abstracts of published papers will be checked by the organisers for relevance to the workshop. These abstracts are not anonymised because they include the full reference. {% endcomment %}
             Authors of accepted papers will be invited for spotlight and poster presentations at the workshop, so that all authors have a chance to speak.
             All presentations will be held in person in Hong Kong, in accordance with WSDM 2027 policy; accepted papers that cannot be presented in person will be excluded from the Companion Proceedings.
             Accepted original papers will be published in the <b>WSDM 2027 Companion Proceedings</b>.
