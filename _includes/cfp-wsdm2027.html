@@ -129,7 +129,8 @@
         <div class="ls-block">
           <h3>Paper submission &amp; selection</h3>
           <p>
-            <!-- TODO: submission system (CMT / OpenReview) and template (ACM sigconf?) once decided. -->
+            <!-- TODO: template (ACM sigconf?) once decided. -->
+            Submission system: Microsoft CMT (the submission link will be announced here).<br>
             Paper template: <span class="tba">To be announced.</span>
           </p>
           <p style="margin-bottom: 0;">
@@ -147,10 +148,10 @@
 
         <!-- Submit button: set submission_system and submission_url in wsdm2027.md once the submission site is open. -->
         <div class="ls-block submit-wrap">
-          {% if page.submission_url %}
+          {% if page.submission_url and page.submission_url != "" %}
           <a class="submit-btn" href="{{ page.submission_url }}" target="_blank">Submit via {{ page.submission_system }} &rarr;</a>
           {% else %}
-          <span class="submit-btn disabled">Submission site to be announced</span>
+          <span class="submit-btn disabled">Submit via {{ page.submission_system | default: "CMT" }}: link to be announced</span>
           {% endif %}
         </div>
 

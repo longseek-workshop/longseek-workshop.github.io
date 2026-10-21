@@ -4,7 +4,7 @@ position: Postdoctoral Researcher
 organization: Yale University
 loc: United States
 img: assets/img/placeholder.svg
-# personal-page: TODO (add the organiser's homepage)
+personal-page: https://medicine.yale.edu/profile/yan-wang-yw937/
 email: yan.wang.yw937@yale.edu
 order: 5
 ---

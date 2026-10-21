@@ -4,7 +4,7 @@ position: Research Director
 organization: Databricks
 loc: United States
 img: assets/img/placeholder.svg
-# personal-page: TODO (add the organiser's homepage)
+personal-page: https://bendersky.github.io/
 email: michael.bendersky@databricks.com
 order: 9
 ---
