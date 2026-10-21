@@ -989,7 +989,7 @@ body {
 body.home-wsdm2027 header {
     background-color: #333;
     background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/hongkong.jpg);
-    background-position: center center; /* hongkong.jpg is pre-cropped (2026-10-21): top of the skyline kept, most of the water removed */
+    background-position: center top; /* hongkong.jpg is pre-cropped (2026-10-21); align its top edge so the building tops are never cut on wide screens */
 }
 
 body.home-wsdm2027 header .intro-text {
