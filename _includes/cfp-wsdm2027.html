@@ -67,6 +67,57 @@
           <div class="theme-list">
             <div class="theme-row">
               <h4>Context explosion and efficiency bottleneck</h4>
+              <p>Appending all past observations and actions to the context soon exceeds the context window, adds irrelevant or redundant information, and raises inference cost.</p>
+              <ul>
+                <li><b>Trajectory memorization and management:</b> memory search systems that select relevant information from long, accumulated contexts.</li>
+                <li><b>Context filtration and compression:</b> summarizing long contexts or filtering noise while keeping the relevant information.</li>
+                <li><b>Consistent personalization:</b> keeping user personas consistent over time and at scale.</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Optimization for long temporal horizons</h4>
+              <p>Step-wise supervision is scarce over long horizons, and reinforcement learning with outcome-only rewards leads to unstable training and poorly optimized intermediate steps.</p>
+              <ul>
+                <li><b>Optimization with search calls:</b> issuing search queries and using retrieval pipelines effectively and efficiently over long horizons.</li>
+                <li><b>Intermediate supervision and synthetic data generation:</b> training data or annotations for intermediate steps.</li>
+                <li><b>Learning with sparse rewards:</b> handling delayed and sparse rewards in long-horizon processes.</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Evaluation over long temporal horizons</h4>
+              <p>Most work evaluates only final answers, but errors accumulate over long horizons, so intermediate steps such as search quality also need evaluation.</p>
+              <ul>
+                <li><b>Evaluation data curation with intermediate steps:</b> datasets for assessing intermediate search results, decisions, and actions.</li>
+                <li><b>Multi-dimensional evaluation:</b> efficiency, latency, robustness, computational cost, and error propagation beyond final-task effectiveness.</li>
+                <li><b>Transparency and explainability:</b> measured at intermediate steps and in the final answer.</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Multilingual and multimodal scenarios</h4>
+              <p>Evidence spread across languages and modalities must stay aligned and consistent in memory over many steps.</p>
+              <ul>
+                <li><b>Multilingual:</b> cross-lingual alignment when evidence is in multiple languages.</li>
+                <li><b>Multimodal:</b> reasoning over text, images, and other modalities with consistent representations and memory.</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Long horizons in domain-specific scenarios</h4>
+              <p>We welcome work on law, finance, medicine, science, education, and other domains, including domain knowledge integration and domain-specific models and applications.</p>
+            </div>
+            <div class="theme-row">
+              <h4>Human-centered long-horizon information seeking</h4>
+              <p>How do users inspect and correct what a system remembers, and how do trust and reliance evolve over weeks of interaction? We welcome user studies, interaction design, and qualitative work.</p>
+            </div>
+            <div class="theme-row">
+              <h4>Deployment and industrial experience</h4>
+              <p>What can be learned from real deployments, system analyses, monitoring practices, hybrid architectures, success stories, failure cases, and negative results involving long-horizon information-seeking systems?</p>
+            </div>
+          </div>
+          <p style="margin-top: 12px; margin-bottom: 0;">We are open to other topics, including, but not limited to, lifelong learning and self-evolving methods in long-horizon settings, as well as new resources and perspectives. Negative results and analyses of failure cases are also welcome.</p>
+          {% comment %} Previous, longer version of the themes (replaced 2026-10-21); kept for reference.
+          <div class="theme-list">
+            <div class="theme-row">
+              <h4>Context explosion and efficiency bottleneck</h4>
               <p>Existing studies have shown that systems struggle to process long and accumulated contexts in a long-horizon setting. Most existing studies naively append all past information (e.g., observations and actions) as context to LLMs. However, the unboundedly growing context quickly hits context window limits of LLMs, introduces substantial irrelevant or redundant information, and incurs high inference costs or performance drop.</p>
               <p>We aim to explore research directions, including, but not limited to, the following:</p>
               <ul>
@@ -114,6 +165,7 @@
             </div>
           </div>
           <p style="margin-top: 12px; margin-bottom: 0;">We are open to other topics, including, but not limited to, lifelong learning and self-evolving methods in long-horizon settings, as well as new resources and perspectives.</p>
+          {% endcomment %}
         </div>
 
         <div class="ls-block">
@@ -132,8 +184,10 @@
             Paper template: papers must use the <a href="https://www.acm.org/publications/proceedings-template" target="_blank">ACM formatting</a>, sigconf style, and be submitted as PDF; original papers use <code>\documentclass[sigconf,anonymous,review]{acmart}</code>.
           </p>
           <p style="margin-bottom: 0;">
-            Each manuscript will be peer-reviewed by at least three program committee (PC) members.
-            Original papers are reviewed double-blind, so authors must anonymise their submissions; abstracts of published papers are not anonymised because they include the full reference.
+            Each original paper will be peer-reviewed by at least three program committee (PC) members.
+            The review of original papers is double-blind, so authors must anonymise their submissions.
+            Abstracts of published papers will be checked by the organisers for relevance to the workshop.
+            These abstracts are not anonymised because they include the full reference.
             Authors of accepted papers will be invited for spotlight and poster presentations at the workshop, so that all authors have a chance to speak.
             All presentations will be held in person in Hong Kong, in accordance with WSDM 2027 policy; accepted papers that cannot be presented in person will be excluded from the Companion Proceedings.
             Accepted original papers will be published in the WSDM 2027 Companion Proceedings.
