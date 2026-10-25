@@ -12,18 +12,19 @@
                     We define it at two levels.
                 </p>
                 <ul class="large text-muted">
-                    <li><b>At the level of a single complex query, a system may need to carry out a large number of search and reasoning rounds across multiple resources</b>; a single query can require over one hundred search calls.</li>
+                    <li><b>At the level of a single complex query (e.g., a deep research task), a system may need to carry out a large number of search and reasoning rounds across multiple resources</b>; a single query can require over one hundred search calls.</li>
                     <li><b>Beyond individual queries, users issue sequences of related queries over multiple days or months</b>, where later queries build on information accumulated from earlier interactions.
                     For example, a user managing a health concern may first search for symptoms, later compare treatments, and return over months to interpret new test results.</li>
                 </ul>
                 <p class="large text-muted">
+                    {% comment %} Removed 2026-10-23 (opening read too much like a paper):
                     Long-horizon information seeking underpins deep research agents and long-term personal assistants and has strong potential for supporting complex tasks.
                     However, most existing work remains short-horizon: agentic search systems typically issue only a handful of search calls, and conversational search systems use only a few tightly coupled turns.
                     Challenges specific to long horizons remain largely unresolved, including context explosion, long-term memory management, efficiency under extensive search, sparse and delayed supervision, the lack of evaluation of intermediate steps, and multilingual, multimodal, and domain-specific settings.
-                    <br><br>
+                    {% endcomment %}
                     We are excited to announce the first Workshop on <b>Long</b>-Horizon Information <b>Seek</b>ing (LongSeek), which will be held in person at the <a href="https://www.wsdm-conference.org/2027/" target="_blank">20th ACM International Conference on Web Search and Data Mining (WSDM 2027)</a> in Hong Kong on 19 February 2027.
                     LongSeek brings together the web search, information retrieval (IR), and natural language processing (NLP) communities around memory and context management, reasoning, optimization, and evaluation for long-horizon information seeking.
-                    The program is discussion-oriented, with two keynotes, paper spotlights, a poster session, a panel, and a best paper award.
+                    {% comment %} Removed 2026-10-23: The program is discussion-oriented, with two keynotes, paper spotlights, a poster session, a panel, and a best paper award. {% endcomment %}
                 </p>
             </div>
         </div>
