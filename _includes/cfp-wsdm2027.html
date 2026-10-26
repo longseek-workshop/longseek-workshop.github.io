@@ -88,11 +88,12 @@
             </div>
             <div class="theme-row">
               <h4>Evaluation over long temporal horizons</h4>
-              <p>Most work evaluates only final answers, but errors accumulate over long horizons, so intermediate steps such as search quality also need evaluation.</p>
+              <p>Final-answer accuracy alone does not capture intermediate search and reasoning quality, cumulative costs, or safety and privacy risks over long horizons.</p>
               <ul>
-                <li><b>Evaluation data curation with intermediate steps:</b> What datasets can assess intermediate search results, decisions, and actions?</li>
-                <li><b>Multi-dimensional evaluation:</b> How can we measure efficiency, latency, robustness, computational cost, and error propagation beyond final-task effectiveness?</li>
-                <li><b>Transparency and explainability:</b> How can we measure transparency and explainability at intermediate steps and in the final answer?</li>
+                <li><b>Evaluation datasets with intermediate annotations:</b> How can we build evaluation datasets with relevance judgments for retrieved documents and annotations for intermediate search queries and reasoning steps? How can we construct such datasets at scale?</li>
+                <li><b>Efficiency and robustness:</b> How can we evaluate the trade-offs between task effectiveness, latency, and computational cost? How can we assess robustness to noisy evidence and tool failures as search trajectories and interaction histories grow?</li>
+                <li><b>Transparency and explainability:</b> How can we trace the evidence behind agents' intermediate decisions and final answers over long horizons? How can we assess whether explanations faithfully reflect the search and reasoning process? How can we evaluate whether these explanations are understandable to humans?</li>
+                <li><b>Safety and privacy:</b> How can we evaluate whether agents continue to follow safety constraints over long search and reasoning trajectories, including under prompt injection? How can we detect privacy leakage through reasoning traces, tool calls, and final answers across steps and sessions?</li>
               </ul>
             </div>
             <div class="theme-row">
