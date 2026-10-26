@@ -78,12 +78,12 @@
             </div>
             <div class="theme-row">
               <h4>Optimization over long temporal horizons</h4>
-              <p>Step-wise supervision is scarce over long horizons, and reinforcement learning with outcome-only rewards leads to unstable training and poorly optimized intermediate steps.</p>
+              <p>Limited step-wise supervision, sparse or delayed rewards, and high computational costs make long-horizon agents challenging to train and optimize.</p>
               <ul>
-                <li><b>Optimization with search calls:</b> How can systems issue search queries and use retrieval pipelines effectively and efficiently over long horizons?</li>
-                <li><b>Intermediate supervision and synthetic data generation:</b> How can we obtain training data or annotations for intermediate steps?</li>
-                <li><b>Learning with sparse rewards:</b> How can systems handle delayed and sparse rewards in long-horizon processes?</li>
-                <li><b>Lifelong learning and self-evolution:</b> How can systems continually improve from accumulated interactions and experience across queries and over time?</li>
+                <li><b>Synthetic training data generation:</b> How can we generate high-quality long-horizon training trajectories that include a user question, intermediate search and reasoning steps, and a final answer?</li>
+                <li><b>Reinforcement learning with sparse and delayed rewards:</b> How can agents learn stable and effective policies from sparse or delayed rewards? How can rewards be designed and credit assigned to intermediate search, reasoning, and other tool-use decisions?</li>
+                <li><b>Optimizing agents for efficiency:</b> How can we train agents to allocate search and reasoning budgets, avoid redundant search tool calls, and decide when to stop while balancing task effectiveness, latency, and computational cost?</li>
+                <li><b>Continual learning and self-evolution:</b> How can agents improve from feedback and accumulated experience across tasks and over time while retaining previously acquired capabilities?</li>
               </ul>
             </div>
             <div class="theme-row">
