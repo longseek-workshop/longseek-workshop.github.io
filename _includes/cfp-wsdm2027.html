@@ -71,6 +71,57 @@
               <h4>Memory management over long temporal horizons</h4>
               <p>Appending all past observations and actions to the context soon exceeds the context window, adds irrelevant or redundant information, and raises inference cost.</p>
               <ul>
+                <li><b>Trajectory memorization and management:</b> How can memory search systems select relevant information from long, accumulated contexts?</li>
+                <li><b>Context filtration and compression:</b> How can long contexts be summarized or filtered while keeping the relevant information?</li>
+                <li><b>Consistent personalization:</b> How can user personas stay consistent over time and at scale?</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Optimization over long temporal horizons</h4>
+              <p>Step-wise supervision is scarce over long horizons, and reinforcement learning with outcome-only rewards leads to unstable training and poorly optimized intermediate steps.</p>
+              <ul>
+                <li><b>Optimization with search calls:</b> How can systems issue search queries and use retrieval pipelines effectively and efficiently over long horizons?</li>
+                <li><b>Intermediate supervision and synthetic data generation:</b> How can we obtain training data or annotations for intermediate steps?</li>
+                <li><b>Learning with sparse rewards:</b> How can systems handle delayed and sparse rewards in long-horizon processes?</li>
+                <li><b>Lifelong learning and self-evolution:</b> How can systems continually improve from accumulated interactions and experience across queries and over time?</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Evaluation over long temporal horizons</h4>
+              <p>Most work evaluates only final answers, but errors accumulate over long horizons, so intermediate steps such as search quality also need evaluation.</p>
+              <ul>
+                <li><b>Evaluation data curation with intermediate steps:</b> What datasets can assess intermediate search results, decisions, and actions?</li>
+                <li><b>Multi-dimensional evaluation:</b> How can we measure efficiency, latency, robustness, computational cost, and error propagation beyond final-task effectiveness?</li>
+                <li><b>Transparency and explainability:</b> How can we measure transparency and explainability at intermediate steps and in the final answer?</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Long horizons in multilingual and multimodal scenarios</h4>
+              <p>Evidence spread across languages and modalities must stay aligned and consistent in memory over many steps.</p>
+              <ul>
+                <li><b>Multilingual:</b> How can systems align evidence across multiple languages?</li>
+                <li><b>Multimodal:</b> How can systems reason over text, images, and other modalities with consistent representations and memory?</li>
+              </ul>
+            </div>
+            <div class="theme-row">
+              <h4>Long horizons in domain-specific scenarios</h4>
+              <p>We welcome work on law, finance, medicine, science, education, enterprise, and other domains, including domain knowledge integration and domain-specific models and applications.</p>
+            </div>
+            <div class="theme-row">
+              <h4>Human-centered long-horizon information tasks</h4>
+              <p>How do users inspect and correct what a system remembers, and how do trust and reliance evolve over weeks of interaction? We welcome user studies, interaction design, and qualitative work.</p>
+            </div>
+            <div class="theme-row">
+              <h4>Deployment and industrial experience</h4>
+              <p>What can be learned from real deployments, system analyses, monitoring practices, hybrid architectures, success stories, failure cases, and negative results involving systems for long-horizon information tasks?</p>
+            </div>
+          </div>
+          {% comment %} Statement-style theme descriptions (replaced 2026-10-26 by questions):
+          <div class="theme-list">
+            <div class="theme-row">
+              <h4>Memory management over long temporal horizons</h4>
+              <p>Appending all past observations and actions to the context soon exceeds the context window, adds irrelevant or redundant information, and raises inference cost.</p>
+              <ul>
                 <li><b>Trajectory memorization and management:</b> memory search systems that select relevant information from long, accumulated contexts.</li>
                 <li><b>Context filtration and compression:</b> summarizing long contexts or filtering noise while keeping the relevant information.</li>
                 <li><b>Consistent personalization:</b> keeping user personas consistent over time and at scale.</li>
@@ -116,6 +167,7 @@
               <p>What can be learned from real deployments, system analyses, monitoring practices, hybrid architectures, success stories, failure cases, and negative results involving systems for long-horizon information tasks?</p>
             </div>
           </div>
+          {% endcomment %}
           {% comment %} Moved to the intro 2026-10-23: We are open to other topics, including, but not limited to, lifelong learning and self-evolving methods in long-horizon settings, as well as new resources and perspectives. {% endcomment %}
           {% comment %} Moved to the intro 2026-10-25: Negative results and analyses of failure cases are also welcome. {% endcomment %}
           {% comment %} Previous, longer version of the themes (replaced 2026-10-21); kept for reference.
